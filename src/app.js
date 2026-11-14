@@ -1,4 +1,6 @@
 const express = require('express')
+const indexRouter = require('./routes/index.js')
+
 const app = express()
 app.set('view engine', 'ejs')
 const PORT = 3000
@@ -16,11 +18,7 @@ const messages = [
   }
 ];
 
-
-app.get('/', (req, res) => {
-    console.log('first reponse')
-    res.render('index')
-})
+app.use('/', indexRouter)
 
 
 app.listen(PORT, (err) => {
