@@ -11,6 +11,7 @@
         <% messages.forEach(message => { %>
             <p><%=message.user%></p>
             <p><%=message.text%></p>
+            <a href="/message/<%= message.messageId %>">open</a>
         <%})%>    
     </div>
 </body>
