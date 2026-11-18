@@ -9,6 +9,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/', indexRouter)
 
+app.use((req,res,next) => {
+    res.status(404).render('404', {title:'Page not Found'})
+})
 
 app.listen(PORT, (err) => {
     if(err) {
