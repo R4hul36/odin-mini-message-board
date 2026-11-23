@@ -7,13 +7,25 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1><%=title%></h1>
-    <div class="messages-container">
-        <% messages.forEach(message => { %>
-            <p><%=message.user%></p>
-            <p><%=message.text%></p>
-            <a href="/message/<%= message.messageId %>">open</a>
-        <%})%>    
+    <div class="page-container">   
+        <header>
+            <h1><%=title%></h1>
+            <p>A little space to share your thoughts</p>
+        </header>
+        <main class="messages-container">
+            <div class="message-header">
+                <h2>Recent Messages</h2>
+                <a href="/new">Create</a>
+            </div>
+            <% messages.forEach(message => { %>
+                <article>
+                    <p><%=message.user%></p>
+                    <p><%=message.text%></p>
+                    <a href="/message/<%= message.messageId %>">open</a>
+                </article>
+            <%})%>    
+        </main>
+        <footer></footer>
     </div>
 </body>
 </html>

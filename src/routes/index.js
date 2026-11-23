@@ -2,7 +2,7 @@ const {Router} = require('express')
 const router = Router();
 
 
-  const messages = [
+const messages = [
     {
       text: "Hi there!",
       user: "Amando",
