@@ -3,3 +3,89 @@
     padding: 0;
     box-sizing: border-box;
 }
+ 
+body {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page-container {
+    width: 60vw;
+    margin: 5rem auto 0 auto;
+    background-color: #F4F6FA;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Page header */
+header {
+    background-color: rgb(0, 0, 125);
+    color: white;
+    padding: 1rem 0.7rem;;
+}
+
+h1{
+    font-size: larger;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: large;
+    font-weight: 500;
+}
+
+.sub-title {
+    font-size: 14px;
+    margin-top: 8px;
+    color: rgb(202, 202, 202);
+}
+
+/* messages page */
+
+.message-container,
+.message-header
+{
+    padding:1rem;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+}
+
+.new-btn {
+    padding: 0.6rem;
+    color: white;
+    border-radius: 8px;
+    background-color: rgb(49, 99, 208);
+}
+
+.new-btn:hover {
+    opacity: 0.8;
+}
+
+/* message tile */
+.message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+
+article {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.8rem;
+}
+
+.user-info {
+    font-size: 14px;
+    color: rgb(147, 147, 147);
+}

@@ -4,6 +4,7 @@ const indexRouter = require('./routes/index.js')
 
 const app = express()
 app.set('view engine', 'ejs')
+app.set('views', './src/views');
 const PORT = 3000
 
 app.use(express.static(path.join(__dirname, 'public')))

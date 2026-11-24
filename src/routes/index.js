@@ -19,7 +19,7 @@ const messages = [
 
 router.get('/', (req, res) => {
     console.log('first response')
-    res.render('index', {title: 'Mini Messageboard', messages})
+    res.render('index', {title: 'Mini Message Board', messages})
 })
 
 router.get('/new', (req, res) => {

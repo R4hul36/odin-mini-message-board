@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <div class="page-container">   
         <header>
             <h1><%=title%></h1>
-            <p>A little space to share your thoughts</p>
+            <p class="sub-title">A place to share your thoughts with others.</p>
         </header>
-        <main class="messages-container">
-            <div class="message-header">
+        <div class="message-header">
                 <h2>Recent Messages</h2>
-                <a href="/new">Create</a>
-            </div>
+                <a href="/new" class="new-btn">+ New</a>
+        </div>
+        <main class="message-container">
+            
             <% messages.forEach(message => { %>
                 <article>
-                    <p><%=message.user%></p>
                     <p><%=message.text%></p>
+                    <p class="user-info"><%=message.user%> <span>.</span> <%= message.added.toLocaleString('en-US', {
+                        dateStyle: 'medium',
+                        timeStyle: 'short'
+                    })%></p>   
                     <a href="/message/<%= message.messageId %>">open</a>
                 </article>
             <%})%>    
