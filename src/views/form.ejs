@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Post</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <h1>Create New Message</h1>
-    <form action="/new" method="POST">
-        <div class="user">
-            <label for="messageUser">Name</label>
-            <input type="text" id="messageUser" name="messageUser">
+    <div class="page-container">
+         <%- include('./partials/header')%>
+        <div class="message-header">
+                <h2>Create New Message</h2>
         </div>
-        <div class="message">
-            <label for="messageText">Message</label>
-            <textarea name="messageText" id="messageText" placeholder="write your message..."></textarea>
-        </div>
-        <button type="submit">Submit</button>
-    </form>
+        <form action="/new" method="POST" class="new-form">
+            <div class="user">
+                <label for="messageUser">Name</label>
+                <input type="text" id="messageUser" name="messageUser" placeholder="enter your name">
+            </div>
+            <div class="message">
+                <label for="messageText">Message</label>
+                <textarea name="messageText" id="messageText" placeholder="write your message..." rows="8"></textarea>
+            </div>
+            <div class="btns">
+                <button type="submit" class="submit-btn">Post Message</button>
+                <a href="/" class="cancel-btn">Cancel</a>
+            </div>
+        </form>
+        <%- include('./partials/footer.ejs') %>
+    </div>
+    
 </body>
 </html>

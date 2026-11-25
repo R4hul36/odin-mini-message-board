@@ -13,7 +13,7 @@ a {
 }
 
 .page-container {
-    width: 60vw;
+    width: 50vw;
     margin: 5rem auto 0 auto;
     background-color: #F4F6FA;
     overflow: hidden;
@@ -46,7 +46,8 @@ h2 {
 /* messages page */
 
 .message-container,
-.message-header
+.message-header,
+.new-form
 {
     padding:1rem;
 }
@@ -58,8 +59,11 @@ h2 {
     padding-bottom: 0;
 }
 
-.new-btn {
+.new-btn,
+.submit-btn
+{
     padding: 0.6rem;
+    border: none;
     color: white;
     border-radius: 8px;
     background-color: rgb(49, 99, 208);
@@ -88,4 +92,38 @@ article {
 .user-info {
     font-size: 14px;
     color: rgb(147, 147, 147);
+}
+
+/* new message form */
+
+.new-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    align-items: left;
+}
+
+.user,
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+input,
+textarea {
+    border-radius: 8px;
+    border: 0.8px solid rgb(182, 182, 182);
+    padding: 0.5rem;;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: rgb(135, 135, 135);
 }
