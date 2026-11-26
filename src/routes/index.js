@@ -32,7 +32,7 @@ router.get('/message/:id', (req, res) => {
   console.log(id)
   console.log(messages)
   console.log(message)
-  res.render('message', {message})
+  res.render('message', {title: 'Mini Message Board', message})
 })
 
 router.post('/new', (req, res) => {

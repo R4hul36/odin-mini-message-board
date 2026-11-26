@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <div class="message">
-        <p>
-            <%= message.user %>
-        </p>
+    <div class="page-container">   
+        <%- include('./partials/header')%>
+        <div class="back-btn">
+            <a href="/" >
+                ← Back to messages
+            </a>
+        </div>
+        <div class="message-header">
+                <h2>Message Details</h2>
+        </div>
+        <div class="message-info">
+            <p class="message-body">
+                <%= message.text %>   
+            </p>
+            <hr>
+            <div class="user-and-time-info">
+                <p class="user-name">             
+                    Posted by: <%= message.user %>
+                </p>
+                <p class="user-info">
+                    Posted on: <%= message.added.toLocaleString('en-US', {
+                            dateStyle: 'medium',
+                            timeStyle: 'short'
+                        })%> 
+                </p>
+            </div>
+        </div>
+        <%- include('./partials/footer')%>
     </div>
 </body>
 </html>
